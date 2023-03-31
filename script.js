@@ -54,9 +54,23 @@ const operation = async (data) => {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(data),
-      })      
+      })
 
       if(!resPost.ok) throw {status: resPost.status, statusText: resPost.statusText}
+
+    } else if (!data.name) {
+      let resDelete = await fetch(`${usersUrl}/${data.id}`, {
+        method:"DELETE"
+      })
+    } else {
+      let resUpdate = await fetch(`${usersUrl}/${data.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      alert($btnForm.dateset.id);
     }
 
   } catch (err) {
@@ -72,6 +86,7 @@ d.addEventListener("submit", (e) => {
     e.preventDefault();
 
     operation({
+      id: $btnForm.dataset.id || null,
       name: e.target.name.value,
       constellation: e.target.constellation.value,
       age: e.target.age.value
@@ -84,7 +99,6 @@ d.addEventListener("click", e => {
     $title.textContent = `Editar Santo`;
     $btnForm.value = `Editar`;
 
-    console.log(e.target.dataset.age);
     $form.name.value = e.target.dataset.name;
     $form.constellation.value = e.target.dataset.constellation;
     $form.age.value = e.target.dataset.age;
