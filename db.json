@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "camilo",
+      "constellation": "aries",
+      "age": 20
+    },
+    {
+      "name": "cristian ",
+      "constellation": "leo",
+      "age": "32",
+      "id": 2
+    }
+  ]
+}
