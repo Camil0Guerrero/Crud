@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practica crud</title>
+</head>
+<body>
+  <h1>Practicando data-attributes y captura de eventos</h1>
+
+  <form class="crud-form" autocomplete="off">
+    <h2 class="form-title">Ingresa tus datos :)</h2>
+    <label>Nombre:</label>
+    <input type="text" name="name" placeholder="Ingresa tu nombre" required />
+    <label>Constelación: </label>
+    <input type="text" name="constellation" placeholder="Ingresa tu constelación" required />
+    <label>Edad:</label>
+    <input type="number" name="age" placeholder="Ingresa tu edad" required>
+    <input type="reset">
+    <input type="submit" class="btn-form" value="Enviar">
+  </form>
+
+  <table class="crud-table">
+    <h2>Nuestros usuarios:</h2>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Constelación</th>
+        <th>Edad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  
+  <template id="crud-template">
+    <tr>
+      <td class="name"></td>
+      <td class="constellation"></td>
+      <td class="age"></td>
+      <td>
+        <button class="edit">Editar</button>
+        <button class="delete">Eliminar</button>
+      </td>
+    </tr>
+  </template>
+  <script src="crud.js"></script>
+</body>
+</html>
