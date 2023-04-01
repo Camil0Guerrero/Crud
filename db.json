@@ -29,6 +29,12 @@
       "name": "cristian ",
       "constellation": "aries",
       "age": "34"
+    },
+    {
+      "id": 8,
+      "name": "camilo",
+      "constellation": "leo",
+      "age": "123"
     }
   ]
 }

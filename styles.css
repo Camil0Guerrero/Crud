@@ -1,0 +1,152 @@
+html {
+  box-sizing: border-box;
+  font-family: Comic, sans-serif;
+  font-size: 16px;
+}
+
+*, 
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+body {
+  background-color: honeydew;
+}
+
+h1 {
+  margin: -8px;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+h2 {
+  margin: 8px; 
+  padding: 0.5rem;
+  color: navy;
+  text-align: center;
+}
+
+.secondary{
+  color: cornflowerblue;
+} 
+
+/* Formulario mobile */
+.crud-form {
+  text-align: center;
+}
+
+.crud-form input {
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: thin double green;
+  background-color: rgb(209, 209, 0);
+  display: inline-block;
+  width: 100%;
+  margin: 8px auto;
+  padding-left: 0.3rem;
+}
+
+.crud-form input::placeholder {
+  color: navy;
+}
+
+.crud-form input:focus{
+  border-radius: 25%;
+  outline: none;
+  border: thin dashed navy;
+  text-align: center;
+  background-color: rgb(177, 181, 126);
+}
+
+.crud-form input[type="reset"]{
+  background-color: cornflowerblue;
+  border-radius: 1rem;
+  width: 45%;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0.4rem 0.51rem 1.5rem 0rem gray;
+}
+
+.crud-form input[type="submit"]{
+  background-color: lightgreen;
+  border-radius: 1rem;
+  width: 45%;
+  cursor: pointer;
+  box-shadow: 0.4rem 0.51rem 1.5rem 0rem gray;
+}
+
+/* Tabla mobile */
+.crud-table {
+  background-color: #3333;
+  width: 95%;
+  margin: 8px auto;
+  padding: 0.25rem;
+  text-align: justify;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.crud-table th {
+  font-weight: bold;
+  color: rgb(18, 75, 60);
+  text-align: center;
+}
+
+.crud-table td {
+  color: darkblue;
+}
+
+.crud-table td button {
+  border-radius: 0.25rem;
+  padding: 0.1rem;
+  margin: auto;
+  width: 45%;
+}
+
+.crud-table td .edit {
+  background-color: rgb(5, 62, 168);
+  color: white;
+  cursor: pointer;
+}
+
+.crud-table td .delete {
+  background-color: red ;
+  color: white;
+  cursor: pointer;
+}
+
+/* Desktop */
+@media screen and (min-width: 54em) {
+  .crud-form input{
+    width: 43%;
+    margin-left: 4%;
+  }
+
+  .crud-form input[type="number"] {
+    width: 90%;
+    text-align: center;
+  }
+
+  .crud-table {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 68em) {
+  .crud-form input{
+    width: 32%;
+    margin-left: 1%;
+    text-align: center;
+  }
+
+  .crud-form input[type="number"]{
+    width: 32%;
+  }
+
+}
